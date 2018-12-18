@@ -1,0 +1,21 @@
+0 Note that “line by line” is a bit misleading, as it is not enough to simply
+0 compare the two files line by line.
+0 Instead, you should try to find what the files
+0 have in common, to try to find the minimal modifications
+0 necessary to get the
+0 “modified file”. There is however some ambiguity inherent to the problem. For
+0 example, if the original has the lines “A”, “B”
+0 and the modified version has the
++ NEWWW addition !
++ NEW
+0 lines “B”, “A”, was “A” deleted and later inserted, or was “B” inserted and
+0 later deleted? There are a lot of strange edge cases,
+0 so don’t be too worried
+0 about making an implementation which handles absolutely all of them.
+- You should try to make sure that your program is
+- “reasonable” (i.e. if the
+0 original is “A”, “B”, “C”, “D”, “E”, “F” and the modified file is “B”, “C”,
+0 “D”, “E”, “F”, “G”, your program should ideally output that “A” has been
+- deleted and “G” has been inserted at the end, and not say “everything in the
+0 first file was deleted, then everything in the second file was inserted”.
++ NEW NEw NEW

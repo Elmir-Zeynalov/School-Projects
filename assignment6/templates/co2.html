@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CO2 plot page</title>
+    <meta name="description" content="CO2 plot">
+		<style>
+			.container {
+	        width: 500px;
+	        clear: both;
+	    }
+	    .container input {
+	        width: 100%;
+	        clear: both;
+	    }
+		</style>
+</head>
+
+<body bgcolor="#42cef4">
+    <h1> CO2 plot </h1>
+    {% if error %}
+    <h2 style="color:red"> Invalid input! Showing default plot. </h2>
+    {% endif %}
+    <p> Choose plot information: </p>
+    <div class="container">
+	    <form action="/co2_changed" method="POST">
+	        Start year:
+	        <input name="year_from" value="1751"></input>
+	        End year:
+	        <input name="year_to" value="2012"></input>
+	        <br>
+	        Minimum CO2:
+	        <input name="min_co2" value="3"></input>
+	        Maximum CO2:
+	        <input name="max_co2" value="9671"></input>
+	        <br>
+	        <input type="submit" value="Submit">
+	    </form>
+	  </div>
+    <img src="{{url_for('static', filename='co2_plot.jpg')}}" />
+    <br>
+    <a href="/"> HomePage. </a>
+</body>
+
+</html>

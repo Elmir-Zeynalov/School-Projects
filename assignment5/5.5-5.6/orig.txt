@@ -1,0 +1,18 @@
+Note that “line by line” is a bit misleading, as it is not enough to simply
+compare the two files line by line.
+Instead, you should try to find what the files
+have in common, to try to find the minimal modifications
+necessary to get the
+“modified file”. There is however some ambiguity inherent to the problem. For
+example, if the original has the lines “A”, “B”
+and the modified version has the
+lines “B”, “A”, was “A” deleted and later inserted, or was “B” inserted and
+later deleted? There are a lot of strange edge cases,
+so don’t be too worried
+about making an implementation which handles absolutely all of them.
+You should try to make sure that your program is
+“reasonable” (i.e. if the
+original is “A”, “B”, “C”, “D”, “E”, “F” and the modified file is “B”, “C”,
+“D”, “E”, “F”, “G”, your program should ideally output that “A” has been
+deleted and “G” has been inserted at the end, and not say “everything in the
+first file was deleted, then everything in the second file was inserted”.

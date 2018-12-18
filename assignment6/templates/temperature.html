@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Temperature plot page</title>
+    <meta name="description" content="Temperature plot">
+		<style>
+			.container {
+	        width: 500px;
+	        clear: both;
+	    }
+	    .container input {
+	        width: 100%;
+	        clear: both;
+	    }
+		</style>
+</head>
+
+<body bgcolor="#f4a641">
+    <h1> Temperature plot </h1>
+    {% if error %}
+    <h2 style="color:red"> Invalid input! Showing default plot. </h2>
+    {% endif %}
+    <p> Choose plot information: </p>
+    <div class="container">
+	    <form action="/temperature_changed" method="POST">
+	        <select name="months">
+	            {% for month in months %}
+	            <option name="dropdown" value="{{month}}"> {{month}} </option>
+	            {% endfor %}
+	        </select>
+	        <br>
+	        Start year:
+	        <input name="year_from" value="1816"></input>
+	        End year:
+	        <input name="year_to" value="2012"></input>
+	        <br>
+	        Minimum temperature:
+	        <input name="min_temp" value="-6"></input>
+	        Maximum temperature:
+	        <input name="max_temp" value="23"></input>
+	        <br>
+	        <input type="submit" value="Submit">
+	    </form>
+  	</div>
+    <img src="{{url_for('static', filename='temperature_plot.jpg')}}" />
+    <br>
+    <a href="/"> HomePage </a>
+</body>
+
+</html>

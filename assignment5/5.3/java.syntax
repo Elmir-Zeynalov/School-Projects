@@ -1,0 +1,16 @@
+"(?<=class ).*(?=\{)": className
+"class": class
+"[0-9]+": int
+[0-9]*\.[0-9]+|[0-9]+\.[0-9]*": double
+".[^"."|"="|"\s"]*(?=\()": func
+"public|static|protected|private": protectionLevel
+"double |int |short |float |long |bool |String |char": type
+"while|for" : while/for
+"if|else" : if/else
+"null|return|break|continue|try|catch|throws" : special
+"import": import
+"\=|\+|\-|\>|\<|\*|\/(?=/*)": operator
+"\".*\"": string1
+"\'.*\'": string2
+"/\*(.|\n)*?\*/|//.*(?:$|\n)": comments
+"\w*\[]": arr

@@ -1,0 +1,15 @@
+Java syntax i decided to color:
+
+--> class names
+--> class keyword
+--> integers
+--> doubles
+--> functions definitions
+--> protection levels(public,private)
+--> types
+--> while/for keywords
+--> imports
+--> strings
+--> comments
+--> multiline comments with /*... */
+--> arrays

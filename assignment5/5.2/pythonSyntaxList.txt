@@ -1,0 +1,17 @@
+Python syntax i decided to color:
+
+--> if/else/elif
+--> for/while keywords
+--> special words(True,false,in,return,range,len and etc)
+--> function definitions
+--> the def keyword
+--> class keyword
+--> print keyword
+--> integers/floats
+--> the self keyword
+--> strings
+--> comments
+--> multi line comments
+--> classNames
+--> operators
+--> and variable assignments (so whenever we use an '='sign to assign stuff)
